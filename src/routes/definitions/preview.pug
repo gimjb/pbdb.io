@@ -1,0 +1,13 @@
+extends ../pug-templates/default
+include ../pug-includes/interaction-reply
+include ../pug-includes/message-embed
+
+block title
+  title= title
+block content
+  h1 Preview Definition
+  +interaction-reply('term', discord)
+    +message-embed(title)
+      | #{description}
+  a(href='/definitions/') Back
+  

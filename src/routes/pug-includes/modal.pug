@@ -1,0 +1,9 @@
+mixin modal(title, action, method)
+  .modal
+    .modal__header
+      h2.modal__title= title
+    form(action=action method=method)
+      .modal__body
+        block
+      .modal__footer
+        input(type="submit" value="Submit")

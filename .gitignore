@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Secrets
+.env
+!templates/.env
+
+# NPM
+node_modules
+
+# SCSS
+public/styles/*.css
+public/styles/*.css.map
+
+# TypeScript
+src/**/*.d.ts
+src/**/*.js
+src/**/*.js.map
+!src/types.d.ts
+!src/**/*.test.js
+!src/**/test.js
+
+# Log file
+logs.txt

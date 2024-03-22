@@ -1,0 +1,41 @@
+@use 'sass:color';
+
+$small-unit: 0.25rem;
+$large-unit: 1rem;
+
+// Sizes
+$header-height: 5 * $large-unit;
+$padding: $large-unit;
+
+// Border radius
+$small-corner: $small-unit;
+$medium-corner: 2 * $small-unit;
+$large-corner: $large-unit;
+$round-edge: 1000px;
+
+// Breakpoints:
+$screen-xs: 384px; // 24 * 16px
+$screen-s: 512px; // 32 * 16px
+$screen-m: 768px; // 48 * 16px
+$screen-l: 1024px; // 64 * 16px
+$screen-xl: 1280px; // 80 * 16px
+$screen-xxl: 1536px; // 96 * 16px
+
+// Colors:
+$brand-color: hsl(235deg 86% 65%);
+$discord-background1: color.change(
+  $brand-color,
+  $saturation: 25%,
+  $lightness: 20%
+);
+$discord-background2: color.change($discord-background1, $lightness: 15%);
+$discord-background3: color.change($discord-background1, $lightness: 10%);
+$jesus-color: #ed4245;
+$footer-background: #000;
+$text-color: #eee;
+$link-color: $brand-color;
+$color-warning: hsl(40deg 100% 50%);
+$color-danger: hsl(0deg 100% 50%);
+
+// Shadows
+$box-shadow: 0 0.25rem 0.5em 0.25rem color.change($brand-color, $saturation: 55%, $lightness: 10%, $alpha: 0.5);

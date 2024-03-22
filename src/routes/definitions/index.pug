@@ -1,0 +1,19 @@
+extends ../pug-templates/default
+
+block title
+  title Definitions of Theological Terms
+block content
+  h1 Your Submissions
+  if submissions.length
+    ul
+      for submission in submissions
+        li: a.mention(href=`/definitions/${submission._id}`)
+          | /term 
+          span.mention__key term
+          span.mention__value= submission.title
+    a(href="/definitions/new") Add another definition
+  else
+    p
+      | No definitions yet. Why not 
+      a(href="/definitions/new") add one
+      | ?

@@ -1,0 +1,93 @@
+.interaction-reply {
+  &__command {
+    margin-bottom: 0.25rem;
+    cursor: not-allowed;
+    height: 1.5rem;
+    line-height: 1em;
+    color: #fffa;
+    user-select: none;
+
+    .interaction-reply__line {
+      float: left;
+      height: 1.5rem;
+    }
+
+    .interaction-reply__author {
+      margin-right: 0.25rem;
+
+      .interaction-reply__avatar {
+        float: left;
+        margin-right: 0.25rem;
+        border-radius: $round-edge;
+        width: 1rem;
+      }
+
+      .interaction-reply__nickname {
+        transition: text-decoration 0.2s;
+        text-decoration: 0 underline transparent;
+        font-weight: 600;
+      
+        &:hover {
+          text-decoration: 3px underline;
+        }
+      }
+    }
+
+    .interaction-reply__command-name {
+      transition: text-decoration 0.2s;
+      margin-left: 0.25rem;
+      text-decoration: 0 underline transparent;
+      color: $brand-color;
+      
+      &:hover {
+        text-decoration: 3px underline;
+      }
+    }
+  }
+
+  &__bot-avatar {
+    display: inline-block;
+    margin: 0 1rem;
+    border-radius: $round-edge;
+    width: 3rem;
+  }
+
+  &__message-container {
+    display: inline-block;
+    padding-right: 1rem;
+    max-width: calc(100% - 5rem);
+    vertical-align: top;
+  }
+
+  &__bot-nickname {
+    transition: text-decoration 0.2s;
+    cursor: not-allowed;
+    text-decoration: 0 underline transparent;
+    color: $brand-color;
+    font-weight: 600;
+    user-select: none;
+
+    &::after {
+      display: inline-block;
+      margin: 0.25rem;
+      border-radius: $small-corner;
+      background: $brand-color;
+      padding: 0 0.25rem;
+      vertical-align: top;
+      line-height: 1rem;
+      color: $text-color;
+      font-size: 0.75rem;
+      content: 'BOT';
+    }
+
+    &:hover {
+      text-decoration: 3px underline;
+    }
+  }
+
+  &__timestamp {
+    color: #fff8;
+    font-size: 0.75rem;
+    user-select: none;
+  }
+}

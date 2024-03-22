@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Nunito;
+  src: url('/fonts/nunito/nunito-variable.ttf');
+  font-weight: 1 1000;
+  font-style: normal;
+}
+
+* {
+  line-height: 1.5em;
+}
+
+body {
+  color: $text-color;
+  font-family: Nunito, sans-serif;
+}
+
+a {
+  transition: font-style 0.2s, text-decoration 0.2s;
+  text-decoration: 0 underline transparent;
+  color: $link-color;
+  font-weight: 800;
+
+  &:hover, &:focus {
+    outline: none;
+    text-decoration: 3px underline;
+    font-style: oblique 10deg;
+  }
+}
+
+strong {
+  color: #fff;
+  font-weight: 900;
+}
+
+i {
+  font-style: oblique 10deg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
+  line-height: 1em;
+  font-weight: 700;
+}
+
+h1 { font-size: 3.50rem; }
+h2 { font-size: 2.00rem; }
+h3 { font-size: 1.50rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.00rem; }
+h6 { font-size: 0.75rem; }
+
+ol ol {
+  list-style-type: lower-alpha;
+}

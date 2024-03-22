@@ -1,0 +1,22 @@
+extends ../pug-templates/default
+include ../pug-includes/modal
+
+block title
+  title Submit a Definition
+block content
+  +modal('Define a Theological Term', '/definitions/new', 'post', 'Definitions are subject to review and may be modified or removed at the discretion of the bot owner.')
+    div.modal__note
+      | Definitions are subject to review and may be modified or removed at the discretion of the bot owner. Please read the 
+      a(href="/definitions/guidelines") guidelines
+      |  before submitting a definition.
+    label.modal__label.modal__label--required(for="title") Title
+    input(type="text" id="title" name="title" required placeholder="Total Depravity")
+    label.modal__label.modal__label--required(for="description") Description
+    textarea(id="description" name="description" required placeholder="Following Adam’s Fall, all of mankind inherited his fallen nature (Romans 5:12) and became unable to do anything good, let alone seek God (Romans 3:10–12; 1 Corinthians 2:14).")
+    input(type="checkbox" id="accept" name="accept" required)
+    label.modal__label.modal__label--inline.modal__label--required(for="accept")
+      | I accept PBDB’s 
+      a(href="/terms") Terms of Service
+      |  and 
+      a(href="/privacy") Privacy Policy
+      | .

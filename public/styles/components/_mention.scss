@@ -1,0 +1,33 @@
+@use 'sass:color';
+
+.mention {
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+  border-radius: $small-corner;
+  background: color.change($brand-color, $alpha: 0.5);
+  cursor: pointer;
+  padding: 0 $small-corner;
+  color: #fffc;
+  font-weight: 550;
+  user-select: none;
+
+  &:hover, &:focus {
+    background: $brand-color;
+    text-decoration: none;
+    color: #fff;
+    font-style: normal;
+  }
+
+  &--forbidden {
+    cursor: not-allowed;
+  }
+
+  &__key, &__value {
+    font-weight: 300;
+    pointer-events: none;
+  }
+
+  &__key::after {
+    content: ':';
+  }
+}

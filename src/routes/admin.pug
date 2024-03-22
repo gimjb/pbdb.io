@@ -1,0 +1,26 @@
+extends ./pug-templates/default.pug
+
+block title
+  title Definitions of Theological Terms
+block content
+  h1 Submissions by Users
+
+  if submissions.length
+    table
+      thead
+        tr
+          th Title
+          th Author
+          th Date
+      tbody
+        each submission in submissions
+          tr
+            td: a(href=`/definitions/${submission._id}`)= submission.title
+            td= submission.author
+            td= submission.date
+  else
+    p
+      | No definitions yet. Why not 
+      a(href="/definitions/new") add one
+      | ?
+

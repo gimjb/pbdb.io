@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      link(rel="stylesheet", href="/styles/main.css")
+      block meta
+        block title
+          title Primitive Baptist Discord Bot
+  body
+    block body
+      header.header
+        block header
+          nav.header__nav
+            if discord
+              div.col-4
+                a.button.button--danger(href="/auth/discord/logout") Logout
+      main.main-content
+        block content
+      footer.footer
+        block footer
+          div.col-4
+            h3 Legal
+            ul
+              li
+                a(href="/privacy") Privacy Policy
+              li
+                a(href="/terms") Terms of Service

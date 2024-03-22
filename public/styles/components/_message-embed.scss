@@ -1,0 +1,25 @@
+.message-embed {
+  display: block;
+  border-left: 0.25rem solid $brand-color;
+  border-radius: $small-corner;
+  background: $discord-background2;
+  padding: 0.5rem;
+  min-width: calc($screen-s - 5.5rem);
+  max-width: 32rem;
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+
+  @media screen and (max-width: $screen-s) {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+  }
+
+}

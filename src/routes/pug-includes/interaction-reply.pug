@@ -1,0 +1,17 @@
+mixin interaction-reply(commandName, discord)
+  .interaction-reply
+    .interaction-reply__command
+      img.interaction-reply__line(src='/images/reply.svg')
+      span.interaction-reply__author
+        img.interaction-reply__avatar(src=discord.avatar)
+        span.interaction-reply__nickname= discord.globalName
+      span.interaction-reply__action used
+      span.interaction-reply__command-name= `/${commandName}`
+    img.interaction-reply__bot-avatar(src='/images/avatar.svg')
+    .interaction-reply__message-container
+      span.interaction-reply__bot-nickname PBDB
+      span.interaction-reply__timestamp= new Date().toLocaleString(locale)
+      .interaction-reply__message-content
+        block
+
+      

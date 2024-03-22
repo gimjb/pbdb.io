@@ -1,0 +1,64 @@
+extends pug-templates/default
+
+block content
+  h1 Privacy Policy
+  p
+    | This privacy policy governs the manner in which this website and the PBDB
+    | Discord bot collect, use, and maintain information collected from users.
+  h2 1. Information Collection and Use
+  p
+    | PBDB collects, stores, and processes the following information:
+  ul
+    li
+      | user preferences (
+      span.mention.mention--forbidden /userprefs
+      |  command) for displaying Bible verses:
+      ul
+        li the user’s Discord ID;
+        li whether to post as a Discord embed or blockquote;
+        li whether to post verses inline or on separate lines; and
+        li whether to use "straight" or “curly” quotes (also known as “smart” quotes);
+    li
+      | the duration of the cooldown period for posting the same verse in the
+      | same version in the same channel (default: 3 minutes (180 seconds)):
+      ul
+        li the server’s Discord ID;
+        li
+          | the preferred duration of the cooldown period (
+          span.mention.mention--forbidden /serverprefs cooldown
+          |  command);
+        li the channel’s Discord ID; and
+        li the verse’s reference (e.g., “Ephesians 1:4 (KJV1900)”);
+    li
+      | definitions of theological terms submitted through the website (
+      a(href='/definitions/new') pbdb.io/definitions/new
+      | ):
+      ul
+        li your Discord user ID;
+        li the term’s “name” or “title;” and
+        li the term’s “definition” or “description.”
+  h2 2. Information Sharing
+  p
+    | Any information collected by PBDB may be publicly shared or disclosed to
+    | third parties, such as Discord and users of the bot or website.
+  h2 3. User Rights
+  p
+    | Users have the right to request the removal of their data from the
+    | database. To exercise this right, users can contact the bot owner through
+    | Discord (
+    a.mention(href='https://discord.gg/uVZrsdmD') @gimjb
+    | ). Upon receiving such a request, the bot owner will promptly remove the
+    | user’s data from the database.
+  h2 4. Updates to the Privacy Policy
+  p
+    | PBDB reserves the right to update this privacy policy at any time. Users
+    | are encouraged to periodically review this policy to stay informed about
+    | how their information is being collected, used, and protected.
+  h2 5. Contact Information
+  p
+    | If you have any questions or concerns about this privacy policy or the
+    | practices of PBDB, you can contact the bot owner via Discord (
+    a.mention(href='https://discord.gg/uVZrsdmD') @gimjb
+    | ) or via email (
+    a.mention(href='mailto:090302@5409.dk') 090302@5409.dk
+    | ).

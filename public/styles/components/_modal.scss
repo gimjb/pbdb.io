@@ -1,0 +1,128 @@
+@use 'sass:color';
+
+.modal {
+  margin: 2rem auto;
+  border-radius: $large-corner;
+  box-shadow: $box-shadow;
+  max-width: $screen-m;
+  user-select: none;
+  overflow: hidden;
+
+  &__header { padding: $padding $padding 0; }
+  &__body { padding: 0 $padding $padding; }
+
+  &__footer {
+    background: $discord-background2;
+    padding: $padding;
+    text-align: right;
+  }
+
+  &__title {
+    font-weight: 300;
+  }
+
+  &__note {
+    border: 1px solid $color-warning;
+    border-radius: $medium-corner;
+    background: color.change($color-warning, $alpha: 0.1);
+    padding: 0.5rem;
+    color: $text-color;
+  }
+
+  &__label {
+    display: block;
+    margin-top: 0.5rem;
+    cursor: text;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    color: color.change($text-color, $alpha: 0.5);
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    &--inline {
+      display: inline-block;
+      cursor: pointer;
+      text-transform: none;
+      color: $text-color;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    &--required::after {
+      display: inline-block;
+      margin-left: 1ch;
+      vertical-align: top;
+      color: $color-danger;
+      font-size: 0.75rem;
+      content: '*';
+    }
+
+    @media screen and (max-width: $screen-m) {
+      border-radius: 0;
+      box-shadow: none;
+      width: 100%;
+    }
+  }
+
+  input[type='text'] {
+    height: 3rem;
+  }
+
+  textarea {
+    height: 8rem;
+    resize: none;
+    line-height: 1.5rem;
+  }
+  
+  input[type='text'], textarea {
+    box-sizing: border-box;
+    transition: outline 0.2s;
+    border: 1px solid $discord-background3;
+    border-radius: $medium-corner;
+    background: $discord-background2;
+    padding: $padding;
+    width: 100%;
+    color: $text-color;
+
+    &:hover {
+      outline: 1px solid color.change($brand-color, $alpha: 0.5);
+    }
+
+    &:focus {
+      outline: 3px solid $brand-color;
+    }
+  }
+
+  input[type='checkbox'] {
+    float: left;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    & + .modal__label--inline {
+      margin-top: 1rem;
+      padding-left: 0.5rem;
+      
+      @media screen and (max-width: $screen-s) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  input[type='submit'] {
+    transition: font-weight 0.2s, background 0.2s;
+    border: 0;
+    border-radius: $medium-corner;
+    background: $brand-color;
+    cursor: pointer;
+    width: 9rem;
+    height: 3rem;
+    color: #fff;
+
+    &:hover, &:focus {
+      background: color.adjust($brand-color, $saturation: 100%, $lightness: 5%);
+      font-weight: 800;
+    }
+  }
+}

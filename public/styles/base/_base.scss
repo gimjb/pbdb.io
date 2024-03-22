@@ -1,0 +1,18 @@
+@use 'sass:color';
+
+* {
+  box-sizing: border-box;
+  transition: outline 0.2s;
+  outline: 0 solid color.change($brand-color, $alpha: 0);
+
+  &:focus {
+    outline: 3px solid $brand-color;
+  }
+}
+
+body {
+  margin: 0;
+  background: $discord-background1;
+  width: 100%;
+  overflow-y: scroll;
+}
